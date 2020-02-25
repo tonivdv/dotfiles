@@ -1,8 +1,7 @@
 cask_args appdir: '/Applications'
 
-tap 'caskroom/cask'
+tap 'homebrew/cask'
 tap 'homebrew/bundle'
-tap 'caskroom/versions'
 tap 'silinternational/tap'
 tap 'havoc-io/mutagen'
 tap 'homebrew/cask-versions'
