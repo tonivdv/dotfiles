@@ -2,13 +2,13 @@
   "entries": {
     "tap": {
       "caskroom/cask": {
-        "revision": "8f264c75986e5bbaf4f7bcabec650fd651c1d272"
+        "revision": "246186ea7456557a099ac57b95d092dec8402a65"
       },
       "homebrew/bundle": {
         "revision": "04a8b37bbdd9bb801a5fde72fd82232846cf2b69"
       },
       "caskroom/versions": {
-        "revision": "a21dbc9f9c0fd25f33b6069ed2876a0e4389f9a5"
+        "revision": "70749d7401b00185797408fc10b83fc88089aff3"
       },
       "silinternational/tap": {
         "revision": "a7698e2ef185ccc0f1c83987f6625c8ab5fff640"
@@ -499,6 +499,27 @@
       "composer": {
         "version": "1.9.3",
         "bottle": false
+      },
+      "serverless": {
+        "version": "1.64.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/serverless-1.64.0.catalina.bottle.tar.gz",
+              "sha256": "ab29f09ae3b6e311967eeefb0a2819d1c1713f11712bf628fb5c96fa86295778"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/serverless-1.64.0.mojave.bottle.tar.gz",
+              "sha256": "051a400f1a39724c656cceaa4b7d459fb2542fbd16eb1c2cb88fe84c859ba130"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/serverless-1.64.0.high_sierra.bottle.tar.gz",
+              "sha256": "e1dc554ff0e7ef56d28b9957b776f1ab4944b7500dceec97ebb95f7388a47d9f"
+            }
+          }
+        }
       }
     },
     "cask": {

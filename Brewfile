@@ -33,8 +33,11 @@ brew 'mutagen'
 brew 'deployer'
 brew 'getantibody/tap/antibody'
 brew 'hub'
-brew 'php@7.3'
-brew 'composer'                       # git extension to interact with github
+brew 'php@7.4'
+brew 'composer'                     # git extension to interact with github
+brew 'kubectl'
+brew 'yarn'
+brew 'serverless'
 
 cask 'handbrake'
 cask 'firefox'
@@ -55,3 +58,4 @@ cask 'whatsapp'
 cask 'cyberduck'
 cask 'java'
 cask 'mysqlworkbench'
+cask 'authy'                        # Authy desktop
