@@ -5,6 +5,7 @@ tap 'homebrew/bundle'
 tap 'silinternational/tap'
 tap 'havoc-io/mutagen'
 tap 'homebrew/cask-versions'
+tap 'homebrew/cask-fonts'
 
 brew 'coreutils'
 brew 'dnsmasq'
@@ -59,3 +60,5 @@ cask 'cyberduck'
 cask 'java'
 cask 'mysqlworkbench'
 cask 'authy'                        # Authy desktop
+cask 'font-jetbrains-mono'          # Jetbrains mono font
+cask 'bettertouchtool'

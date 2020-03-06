@@ -8,6 +8,4 @@ if [ ! -d /etc/resolver ]; then
   sudo mkdir /etc/resolver
 fi
 
-sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/dev'
 sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/lan'
-sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/local.adsdaq.dev'
