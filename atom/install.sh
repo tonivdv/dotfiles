@@ -1,1 +1,1 @@
-apm install --packages-file $ZSH/atom/Packages
+apm install --packages-file $DOTFILES/atom/Packages

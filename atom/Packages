@@ -10,3 +10,4 @@ go-plus
 language-docker
 autosave-onchange
 compare-files
+pretty-json

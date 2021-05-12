@@ -1,9 +1,0 @@
-SPACESHIP_PROMPT_ORDER=(
-  user
-  host
-  dir
-  git
-  line_sep
-  vi_mode
-  char
-)
