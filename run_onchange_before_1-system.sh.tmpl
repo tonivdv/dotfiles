@@ -1,0 +1,46 @@
+{{ if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+# Set default screenshot location
+defaults write com.apple.screencapture "location" -string "~/Documents/Screenshots" && killall SystemUIServer
+
+# Disable automatic capitalization
+defaults write -g NSAutomaticCapitalizationEnabled -bool false
+
+# Enable smart dashes
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool true
+
+# Disable press-and-hold for keys in favor of key repeat.
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -int 0
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# Use AirDrop over every interface. srsly this should be a default.
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
+
+# Show the ~/Library folder.
+chflags nohidden ~/Library
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Finder settings
+# ---------------------------------------------------------------------------------------------------------------------
+# Set the Finder prefs for showing a few different volumes on the Desktop.
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+# Show hidden files in the Finder
+defaults write com.apple.Finder "AppleShowAllFiles" -bool "true"
+# Empty Trash securely by default
+defaults write com.apple.finder EmptyTrashSecurely -bool true
+defaults write com.apple.finder FXPreferredViewStyle -string "nlsv"
+
+# Hide Safari's bookmark bar.
+defaults write com.apple.Safari ShowFavoritesBar -bool false
+
+# Set up Safari for development.
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+{{ end -}}

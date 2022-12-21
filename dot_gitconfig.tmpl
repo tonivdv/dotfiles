@@ -1,0 +1,60 @@
+# Local/private config goes in the include
+[include]
+        path = ~/.gitconfig.local
+[hub]
+        protocol = https
+[alias]
+        branch-name             = !git rev-parse --abbrev-ref HEAD
+        wtf                     = !$DOTFILES/bin/git-wtf
+        new-branch              = !$DOTFILES/bin/git-new-branch
+        count                   = !git shortlog -sn
+        prune                   = fetch --prune
+        undo                    = reset --soft HEAD^
+        stash-all               = stash save --include-untracked
+        glog                    = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+        prune-local-branches    = !$DOTFILES/bin/git-prune-local-branches
+        gpul                    = !git pull --prune --rebase
+        fco                     = !git fetch && git checkout
+        delete-untracked-files  = !git clean -fd
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        excludesfile = ~/.gitignore
+        editor = vim
+        autocrlf = input
+        ignorecase = false
+[apply]
+        whitespace = nowarn
+[help]
+        autocorrect = 1
+[push]
+        # See `git help config` (search for push.default)
+        # for more information on different options of the below setting.
+        #
+        # Setting to git 2.0 default to suppress warning message
+        default = simple
+        autoSetupRemote = true
+[commit]
+        # template = ~/.gitmessage.txt
+        gpgsign = true
+[tag]
+        gpgsign = true
+[mergetool]
+        keepBackup = false
+[difftool]
+        prompt = false
+[fetch]
+        prune = true
+[status]
+        showUntrackedFiles = all
+[pager]
+        diff = diff-so-fancy | less --tabs=1,5 -RFX
+        show = diff-so-fancy | less --tabs=1,5 -RFX
+[gpg]
+        program = /usr/local/bin/gpg
+[user]
+	name = {{ .fullname }}
+        email = {{ .gitemail }}
