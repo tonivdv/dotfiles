@@ -16,54 +16,67 @@ tap 'homebrew/cask-fonts'
 ###
 brew 'chezmoi'
 
-brew 'coreutils'
-brew 'wget'
-brew 'libtiff'
-brew 'libtool'
-brew 'ssh-audit'
-brew 'sqlparse'
+###
+# OTHER
+###
 brew 'telnet'
-brew 'jq'
 brew 'tree'
 brew 'bat'                          # alternative to cat command
 brew 'prettyping'                   # wrapper around ping
 brew 'fzf'                          # alternative to CTRL+R
 brew 'diff-so-fancy'                # alternative to git diff
-brew 'git'
-brew 'deployer'
-brew 'hub'
-brew 'php@8.2'
-brew 'composer'                     # git extension to interact with github
-brew 'node@16'
-brew 'yarn', args: ["ignore-dependencies"]
 brew 'todo-txt'
-brew 'serverless'
-brew 'mkcert'
 brew 'adr-tools'
 brew 'graphviz'
-brew 'java'
+cask 'transmission'
+cask 'firefox'
+cask 'cyberduck'
 
 ###
-# Dev Tooling
+# DEV
 ###
+brew 'libtiff'
+brew 'libtool'
+brew 'ssh-audit'
+brew 'wget'
+brew 'coreutils'
 cask 'drawio'
+brew 'bash'
+brew 'jq'
+brew 'node@16'
+brew 'node@18'
+brew 'yarn', args: ["ignore-dependencies"]
+brew 'git'
+brew 'php@8.2'
+brew 'composer'                     # git extension to interact with github
+brew 'mkcert'
+brew 'serverless'
+cask 'postman'
+cask 'iterm2'
+cask 'slack'
+cask 'gpg-suite'
+cask 'visual-studio-code'
+cask 'jetbrains-toolbox'
+cask 'font-jetbrains-mono'          # Jetbrains mono font
 
 ###
-# Messaging
+# SOCIAL
 ###
 cask 'signal'
+cask 'whatsapp'
+cask 'spotify'
 
 ###
-# video tools
+# VIDEO
 ###
 #brew 'avidemux'
 brew 'ffmpeg'
-brew 'youtube-dl' #seems not very active
-brew 'yt-dlp' # fork of youtube-dl
+brew 'youtube-dl'
 cask 'handbrake'
+cask 'vlc'
 
 ###
-# SRE TOOLS
+# SRE
 ###
 brew 'kubectl'
 brew 'helm'
@@ -78,29 +91,20 @@ brew 'ansible'
 cask 'rancher'                      # Docker Desktop alternative
 cask 'confluent-cli'
 
-brew 'bash'
-
-cask 'firefox'
-cask 'iterm2'
-cask 'postman'
-cask 'transmission'
-cask 'vlc'
-cask 'keepingyouawake'
-cask 'spotify'
-cask 'atom'
-cask 'jetbrains-toolbox'
-cask 'rectangle'
-cask 'slack'
-cask 'gpg-suite'
-cask 'whatsapp'
-cask 'cyberduck'
+###
+# SECURITY
+###
 cask 'authy'                        # Authy desktop
-cask 'font-jetbrains-mono'          # Jetbrains mono font
+
+###
+# MACOS
+###
+cask 'keepingyouawake'
+cask 'rectangle'
 cask 'bettertouchtool'
-cask 'visual-studio-code'
 cask 'keka'                         # The macOS file archiver
 cask 'raycast'                      # Spotlight on steroids
-cask 'ubar'                         # Dock replacement
+
 EOF
 
 {{ end -}}
