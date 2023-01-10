@@ -4,17 +4,11 @@
 [hub]
         protocol = https
 [alias]
-        branch-name             = !git rev-parse --abbrev-ref HEAD
-        wtf                     = !$DOTFILES/bin/git-wtf
-        new-branch              = !$DOTFILES/bin/git-new-branch
-        count                   = !git shortlog -sn
         prune                   = fetch --prune
         undo                    = reset --soft HEAD^
+        unstash                 = stash apply
         stash-all               = stash save --include-untracked
-        glog                    = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-        prune-local-branches    = !$DOTFILES/bin/git-prune-local-branches
-        gpul                    = !git pull --prune --rebase
-        fco                     = !git fetch && git checkout
+        prune-local-branches    = !git fetch --prune && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
         delete-untracked-files  = !git clean -fd
 [color]
         diff = auto
