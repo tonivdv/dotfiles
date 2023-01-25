@@ -21,6 +21,9 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 # Show the ~/Library folder.
 chflags nohidden ~/Library
 
+# Disable beep sound
+defaults write NSGlobalDomain "com.apple.sound.beep.volume" -int 0
+
 # ---------------------------------------------------------------------------------------------------------------------
 # Finder settings
 # ---------------------------------------------------------------------------------------------------------------------
