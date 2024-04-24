@@ -51,6 +51,9 @@ fpath=( ~/.zfuncs "${fpath[@]}" )
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+# Sets Node@20 as default
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+
 # Loads PSQL utilities
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
