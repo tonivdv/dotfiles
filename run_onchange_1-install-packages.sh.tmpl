@@ -37,7 +37,6 @@ brew 'libtool'
 brew 'ssh-audit'
 brew 'wget'
 brew 'coreutils'
-cask 'drawio'
 brew 'bash'
 brew 'jq'
 brew 'yarn', args: ["ignore-dependencies"]
@@ -45,6 +44,13 @@ brew 'git'
 brew 'php@8.2'
 brew 'composer'                         # git extension to interact with github
 brew 'mkcert'
+brew 'openjdk@11'
+brew 'libpq'                            # Postgres utilities
+brew 'asdf'
+brew 'pnpm'
+brew 'websocat'                         # Netcat, curl and socat for WebSockets
+brew 'phive'                            # https://phar.io/
+cask 'drawio'
 cask 'postman'
 cask 'iterm2'
 cask 'slack'
@@ -52,15 +58,9 @@ cask 'gpg-suite'
 cask 'visual-studio-code'
 cask 'jetbrains-toolbox'
 cask 'font-jetbrains-mono'              # Jetbrains mono font
-brew 'openjdk@11'
-brew 'libpq'                            # Postgres utilities
 cask 'figma'                            # Figma desktop app
-brew 'asdf'
-brew 'pnpm'
-brew 'websocat'                         # Netcat, curl and socat for WebSockets
 cask 'jetbrains-toolbox'                # Jetbrains toolbox
 cask 'another-redis-desktop-manager'    # Gui for Redis
-brew 'phive'                            # https://phar.io/
 cask 'electron-fiddle'
 cask 'alt-tab'                          # Windows alt-tab on macOS
 
