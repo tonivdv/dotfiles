@@ -1,7 +1,7 @@
 {{ if (eq .chezmoi.os "darwin") -}}
 #!/bin/bash
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
@@ -19,10 +19,10 @@ brew 'chezmoi'
 ###
 brew 'telnet'
 brew 'tree'
-brew 'bat'                          # alternative to cat command
-brew 'prettyping'                   # wrapper around ping
-brew 'fzf'                          # alternative to CTRL+R
-brew 'diff-so-fancy'                # alternative to git diff
+brew 'bat'                              # alternative to cat command
+brew 'prettyping'                       # wrapper around ping
+brew 'fzf'                              # alternative to CTRL+R
+brew 'diff-so-fancy'                    # alternative to git diff
 brew 'todo-txt'
 brew 'adr-tools'
 brew 'graphviz'
@@ -43,7 +43,7 @@ brew 'jq'
 brew 'yarn', args: ["ignore-dependencies"]
 brew 'git'
 brew 'php@8.2'
-brew 'composer'                     # git extension to interact with github
+brew 'composer'                         # git extension to interact with github
 brew 'mkcert'
 cask 'postman'
 cask 'iterm2'
@@ -51,12 +51,18 @@ cask 'slack'
 cask 'gpg-suite'
 cask 'visual-studio-code'
 cask 'jetbrains-toolbox'
-cask 'font-jetbrains-mono'          # Jetbrains mono font
+cask 'font-jetbrains-mono'              # Jetbrains mono font
 brew 'openjdk@11'
-brew 'libpq'                        # Postgres utilities
-cask 'figma'                        # Figma desktop app
+brew 'libpq'                            # Postgres utilities
+cask 'figma'                            # Figma desktop app
 brew 'asdf'
 brew 'pnpm'
+brew 'websocat'                         # Netcat, curl and socat for WebSockets
+cask 'jetbrains-toolbox'                # Jetbrains toolbox
+cask 'another-redis-desktop-manager'    # Gui for Redis
+brew 'phive'                            # https://phar.io/
+cask 'electron-fiddle'
+cask 'alt-tab'                          # Windows alt-tab on macOS
 
 ###
 # SOCIAL
@@ -70,7 +76,7 @@ cask 'spotify'
 ###
 #brew 'avidemux'
 brew 'ffmpeg'
-cask 'handbrake'
+cask 'handbrake-app'
 cask 'vlc'
 
 ###
@@ -86,10 +92,6 @@ brew 'awscli'
 cask 'session-manager-plugin'
 brew 'ansible'
 cask 'confluent-cli'
-brew 'docker'                       # docker binaries 
-brew 'docker-compose'               # docker-compose binaries
-brew 'docker-credential-helper'     # docker credentials helper 
-brew 'colima'                       # container runtime with minimal setup 
 
 ###
 # SECURITY
@@ -98,11 +100,11 @@ brew 'colima'                       # container runtime with minimal setup
 ###
 # MACOS
 ###
-cask 'keepingyouawake'              # Macos sleep control ^^
-cask 'rectangle'                    # Move windows like a rockstar
+cask 'keepingyouawake'                  # Macos sleep control ^^
+cask 'rectangle'                        # Move windows like a rockstar
 cask 'bettertouchtool'
-cask 'keka'                         # The macOS file archiver
-cask 'raycast'                      # Spotlight on steroids
+cask 'keka'                             # The macOS file archiver
+cask 'raycast'                          # Spotlight on steroids
 
 EOF
 
