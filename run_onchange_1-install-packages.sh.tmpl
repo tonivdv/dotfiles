@@ -7,7 +7,9 @@ cask_args appdir: '/Applications'
 tap 'homebrew/bundle'
 tap 'silinternational/tap'
 tap 'havoc-io/mutagen'
-tap 'hashicorp/tap'
+tap 'hashicorp/tap', trusted: true
+tap 'atlassian/homebrew-acli', trusted: true
+tap 'abue-ammar/tinycast', trusted: true
 
 ###
 # Setup
@@ -64,6 +66,11 @@ cask 'another-redis-desktop-manager'    # Gui for Redis
 cask 'alt-tab'                          # Windows alt-tab on macOS
 cask 'flutter'
 brew 'ruby'
+cask 'copilot-cli'
+cask 'claude-code'
+brew 'acli'                             # Atlassian CLI
+brew 'gh'                               # Github CLI
+brew 'fvm'                              # Simple Flutter Version Management
 
 ###
 # SOCIAL
@@ -92,8 +99,7 @@ brew 'hashicorp/tap/terraform'
 brew 'awscli'
 cask 'session-manager-plugin'
 brew 'ansible'
-cask 'confluent-cli'
-brew 'fluxcd/tap/flux'
+brew 'fluxcd/tap/flux', trusted: true
 
 ###
 # SECURITY
@@ -106,8 +112,11 @@ cask 'keepingyouawake'                  # Macos sleep control ^^
 cask 'rectangle'                        # Move windows like a rockstar
 cask 'bettertouchtool'
 cask 'keka'                             # The macOS file archiver
-cask 'raycast'                          # Spotlight on steroids
 cask 'whatcable'                        # plugged usb-c cable analyzer
+brew 'mole'                             # 🐹 Clean, uninstall, analyze, optimize, and monitor your Mac from the terminal.
+cask 'finetune'                         # Control the volume of every app independently
+cask 'purge'                            # Purge finds the junk and clears it
+cask 'tinycast'                         # Replacement for Spotlight and Raycast OSS equivalent
 
 EOF
 
