@@ -1,12 +1,7 @@
-{{ if (eq .chezmoi.os "darwin") -}}
-#!/bin/bash
-
-brew bundle --file=/dev/stdin <<EOF
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 tap 'silinternational/tap'
-tap 'havoc-io/mutagen'
 tap 'hashicorp/tap', trusted: true
 tap 'atlassian/homebrew-acli', trusted: true
 tap 'abue-ammar/tinycast', trusted: true
@@ -117,7 +112,3 @@ brew 'mole'                             # 🐹 Clean, uninstall, analyze, optimi
 cask 'finetune'                         # Control the volume of every app independently
 cask 'purge'                            # Purge finds the junk and clears it
 cask 'tinycast'                         # Replacement for Spotlight and Raycast OSS equivalent
-
-EOF
-
-{{ end -}}
